@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> {% block title %} {% endblock title %}
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link type="image/png" sizes="16x16" rel="icon" href="{% static 'translator/img/synchronize.png' %}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="{% static 'translator/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-transparent">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="/">LT</a></h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link {% if request.path == '/'%} active {% endif %}" href="{% url 'index' %}">Home</a></li>
+                    <li><a class="nav-link {% if request.path == '/about/'%} active {% endif %}" href="{% url 'about' %}">About</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    {% block section_header%} {% endblock section_header %}
+
+    <!-- End Hero -->
+
+    <main id="main">
+        {% block section_main %} {% endblock section_main %}
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="container d-md-flex py-2">
+
+            <div class="me-md-auto text-center text-md-start py-2">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Language Translator</span></strong>. All Rights Reserved
+                </div>
+
+            </div>
+            <div class="nav nav-bottom text-center text-md-right pt-3 pt-md-0">
+                <a class="nav-link {% if request.path == '/'%} active {% endif %}" style="color: #3B4458" href="{% url 'index' %}">Home</a>
+                <a class="nav-link {% if request.path == '/about/'%} active {% endif %}" style="color: #3B4458" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="#" style="color: #3B4458">Terms</a>
+                <a class="nav-link" href="#" style="color: #3B4458">Policies</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{% static 'translator/js/main.js' %}"></script>
+
+</body>
+
+</html>

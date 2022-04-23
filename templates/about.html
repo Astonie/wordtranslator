@@ -1,0 +1,40 @@
+ {% extends 'base.html' %} {% load static %} {% block title %}
+<title>Language Translator | About</title> {% endblock title %} {% block section_header %}
+<section id="heroabout" class="d-flex align-items-center justify-content-center">
+    <div class="container position-relative">
+        <h1>About</h1>
+    </div>
+</section> {% endblock section_header %} {% block section_main %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{% static 'translator/img/dictionary.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+                <h3>Language Translator</h3>
+                <p>
+                    This is a modern website that allows you to translate words from chichewa to english and vice versa.
+                </p>
+                <p>
+                    This is a modern website that allows you to translate words from chichewa to english and vice versa.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>English</h4>
+                        <p>Mvesesani mokwaila mau osiyanasiyana a mu chichewa ndi mamasulilidwe ake a mu chingerezi</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Chichewa</h4>
+                        <p>Have a deep understanding of different words and their translation in english</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock section_main %}
